@@ -1,0 +1,43 @@
+{
+    "roles": [{
+            "id": 0,
+            "NombrePros": "juan diaz",
+            "Celular": "34545454",
+            "Correo": "juan.diaz@chevyplan.com.co",
+            "NroDocPros": "554754554",
+            "TipDocumento": "CC"
+        },
+        {
+            "id": 0,
+            "NombrePros": "juan diaz",
+            "Celular": "34545454",
+            "Correo": "juan.diaz@chevyplan.com.co",
+            "NroDocPros": "554754554",
+            "TipDocumento": "CC"
+        },
+        {
+            "id": 0,
+            "NombrePros": "juan diaz",
+            "Celular": "34545454",
+            "Correo": "juan.diaz@chevyplan.com.co",
+            "NroDocPros": "554754554",
+            "TipDocumento": "CC"
+        },
+        {
+            "id": 0,
+            "NombrePros": "juan diaz",
+            "Celular": "34545454",
+            "Correo": "juan.diaz@chevyplan.com.co",
+            "NroDocPros": "554754554",
+            "TipDocumento": "CC"
+        },
+        {
+            "id": 0,
+            "NombrePros": "juan diaz",
+            "Celular": "34545454",
+            "Correo": "juan.diaz@chevyplan.com.co",
+            "NroDocPros": "554754554",
+            "TipDocumento": "CC"
+        }
+    ]
+}
