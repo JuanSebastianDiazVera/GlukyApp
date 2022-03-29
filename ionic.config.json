@@ -1,0 +1,7 @@
+{
+  "name": "glukyApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
