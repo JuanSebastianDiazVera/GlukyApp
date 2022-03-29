@@ -54,18 +54,18 @@ export class LoginPage implements OnInit {
         .pipe(finalize(() => loading.dismiss()))
         .subscribe((data: any) => {
           this.hablitarCampos = true;
-          // const alertEmail = {
-          //   cssClass: 'sweetAlert1',
-          //   message: `<div style="width: 100%; text-align:center;"><p>No existe usuario</p></div>`,
-          //   buttons: [
-          //     {
-          //       text: 'Cerrar',
-          //       role: 'cancel',
-          //       cssClass: 'btn-Cerrar',
-          //     },
-          //   ],
-          // };
-          // this.showAlert(alertEmail);
+          const alertEmail = {
+            cssClass: 'sweetAlert1',
+            message: `<div style="width: 100%; text-align:center;"><p>No existe usuario</p></div>`,
+            buttons: [
+              {
+                text: 'Cerrar',
+                role: 'cancel',
+                cssClass: 'btn-Cerrar',
+              },
+            ],
+          };
+          this.showAlert(alertEmail);
         });
     });
   }
