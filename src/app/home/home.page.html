@@ -1,26 +1,25 @@
 <ion-content>
-    <!-- <ion-button (click)="toggleInfiniteScroll()" expand="block">
-        Toggle Infinite Scroll
-    </ion-button>
-
-    <ion-list></ion-list>
-
-    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <div class="GeneralContent">
+        <ion-row>
+            <ion-col size="12" size-md="3">
+                <ion-card class="detalleRol cardProspecto" *ngFor="let dateRol of dateRoles">
+                    <ion-row class="ion-no-padding ion-no-margin" style="height: 100%;">
+                        <ion-col size="12" class="ion-padding">
+                            <span class="detalleRol__general">Rol: {{dateRol.Rol}}</span><br>
+                            <span class="detalleRol__general">Nombre: {{dateRol.Nombres}}</span><br>
+                            <span class="detalleRol__general">Apellido: {{dateRol.Apellidos}}</span><br>
+                            <span class="detalleRol__general">Celular: {{dateRol.Celular}}</span><br>
+                            <span class="detalleRol__general">Correo: {{dateRol.Correo}}</span><br>
+                            <span class="detalleRol__general">Documento: {{dateRol.NroDoc}}</span><br>
+                            <span class="detalleRol__general">Tipo Documento: {{dateRol.TipDocumento}}</span><br>
+                        </ion-col>
+                    </ion-row>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </div>
+    <ion-infinite-scroll threshold="80px" (ionInfinite)="loadData($event)">
         <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
         </ion-infinite-scroll-content>
-    </ion-infinite-scroll> -->
-
-    <ion-row>
-        <ion-col size="12">
-            <ion-card class="detalleRol cardProspecto" *ngFor="let dateRol of dateRoles">
-                <ion-row class="ion-no-padding ion-no-margin" style="height: 100%;">
-                    <ion-col size="9" class="ion-padding">
-                        <span class="detalleRol__name">{{dateRol.Nombre}}</span>
-                        <span class="detalleRol__phone">{{dateRol.Celular}}</span><br>
-                        <span class="detalleRol__email">{{dateRol.Correo}}</span>
-                    </ion-col>
-                </ion-row>
-            </ion-card>
-        </ion-col>
-    </ion-row>
+    </ion-infinite-scroll>
 </ion-content>

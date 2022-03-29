@@ -11,8 +11,8 @@ import { LoadingController } from '@ionic/angular';
 })
 export class HomePage {
   @ViewChild(IonInfiniteScroll) infiniteScroll: IonInfiniteScroll;
-  data = [1,2,3,4,5,6]
   dateRoles: Array<any> = [];
+  msgNoMoreData: string;
 
   constructor(
     public http: HttpClient,
@@ -41,10 +41,7 @@ export class HomePage {
     setTimeout(() => {
       console.log('Done');
       event.target.complete();
-
-      // App logic to determine if all data is loaded
-      // and disable the infinite scroll
-      if (this.data.length === 1000) {
+      if (this.dateRoles.length === 1000) {
         event.target.disabled = true;
       }
     }, 500);

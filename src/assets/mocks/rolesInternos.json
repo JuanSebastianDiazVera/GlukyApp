@@ -1,43 +1,63 @@
 {
     "roles": [{
             "id": 0,
-            "NombrePros": "juan diaz",
+            "Nombres": "juan",
+            "Apellidos": "Diaz",
             "Celular": "34545454",
-            "Correo": "juan.diaz@chevyplan.com.co",
-            "NroDocPros": "554754554",
-            "TipDocumento": "CC"
+            "Correo": "jsvera98@gmail.com",
+            "NroDoc": "554754554",
+            "TipDocumento": "CC",
+            "Rol": "Desarrollador"
         },
         {
             "id": 0,
-            "NombrePros": "juan diaz",
+            "Nombres": "pepito",
+            "Apellidos": "perez",
             "Celular": "34545454",
-            "Correo": "juan.diaz@chevyplan.com.co",
-            "NroDocPros": "554754554",
-            "TipDocumento": "CC"
+            "Correo": "jsvera98@gmail.com",
+            "NroDoc": "554754554",
+            "TipDocumento": "CC",
+            "Rol": "Administrador"
         },
         {
             "id": 0,
-            "NombrePros": "juan diaz",
+            "Nombres": "Maria",
+            "Apellidos": "Diaz",
             "Celular": "34545454",
-            "Correo": "juan.diaz@chevyplan.com.co",
-            "NroDocPros": "554754554",
-            "TipDocumento": "CC"
+            "Correo": "jsvera98@gmail.com",
+            "NroDoc": "554754554",
+            "TipDocumento": "CC",
+            "Rol": "Comercial"
         },
         {
             "id": 0,
-            "NombrePros": "juan diaz",
+            "Nombres": "Karen",
+            "Apellidos": "Perez",
             "Celular": "34545454",
-            "Correo": "juan.diaz@chevyplan.com.co",
-            "NroDocPros": "554754554",
-            "TipDocumento": "CC"
+            "Correo": "jsvera98@gmail.com",
+            "NroDoc": "554754554",
+            "TipDocumento": "CC",
+            "Rol": "Call Center"
         },
         {
             "id": 0,
-            "NombrePros": "juan diaz",
+            "Nombres": "juan",
+            "Apellidos": "Diaz",
             "Celular": "34545454",
-            "Correo": "juan.diaz@chevyplan.com.co",
-            "NroDocPros": "554754554",
-            "TipDocumento": "CC"
+            "Correo": "jsvera98@gmail.com",
+            "NroDoc": "554754554",
+            "TipDocumento": "CC",
+            "Rol": "Desarrollador"
+        },
+        {
+            "id": 0,
+            "Nombres": "juan",
+            "Apellidos": "Diaz",
+            "Celular": "34545454",
+            "Correo": "jsvera98@gmail.com",
+            "NroDoc": "554754554",
+            "TipDocumento": "CC",
+            "Rol": "Desarrollador"
         }
     ]
 }

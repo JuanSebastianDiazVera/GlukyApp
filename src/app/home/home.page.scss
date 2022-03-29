@@ -1,20 +1,20 @@
+.GeneralContent {
+    background-image: url("../../assets/images/Background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
 .detalleRol {
     background-color: #e1e1e1;
     width: 100%;
     border-radius: 8px;
-    &__name {
+    &__general {
         font-size: 1rem;
         text-transform: uppercase !important;
-        color: var(--ion-color-primary);
+        color: #000000;
         font-weight: bold;
-    }
-    &__phone {
-        font-size: 1.2rem;
-        color: #373737;
-    }
-    &__email {
-        font-size: 0.9rem;
-        color: #373737;
     }
 }
 
