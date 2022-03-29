@@ -1,0 +1,53 @@
+.GeneralContent {
+    background-image: url("../../assets/images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.contentLogin {
+    width: 90%;
+    margin-top: 20vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    background: rgba(255, 255, 255, 0.972) 0% 0% no-repeat padding-box;
+}
+
+.TextValidation {
+    color: #dc143c;
+    font-size: 11px;
+}
+
+.letraTitulos {
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 760px) {
+    .contentLogin {
+        width: 30%;
+        margin: 10% auto;
+    }
+    .letraTitulos {
+        font-size: 1rem/1.2rem;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    .contentLogin {
+        width: 30%;
+        margin: 5% auto;
+        margin-top: 30vh;
+    }
+}
+
+.w-button {
+    width: 100%;
+}
+
+.cancelButon {
+    --background: #dc143c;
+    color: #ffffff;
+}

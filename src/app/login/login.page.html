@@ -1,8 +1,53 @@
-<ion-header>
-    <ion-toolbar>
-        <ion-title>login</ion-title>
-    </ion-toolbar>
-</ion-header>
-
 <ion-content>
+    <div class="GeneralContent">
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-card-content class="contentLogin">
+                        <form [formGroup]="form" class="form-home">
+                            <div>
+                                <ion-row>
+                                    <ion-col size="12">
+                                        <ion-label color="primary" class="letraTitulos">Usuario</ion-label>
+                                        <ion-input type="text" formControlName="user">
+                                        </ion-input>
+                                        <div *ngIf="f.user.errors && f.user.touched" class="ion-text-center">
+                                            <span *ngIf="f.user.errors.required" class="TextValidation">*Campo obligatorio</span>
+                                        </div>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row>
+                                    <ion-col size="12">
+                                        <ion-label color="primary" class="letraTitulos">Contraseña</ion-label>
+                                        <ion-input type="text" formControlName="password">
+                                        </ion-input>
+                                        <div *ngIf="f.password.errors && f.password.touched" class="ion-text-center">
+                                            <span *ngIf="f.password.errors.required" class="TextValidation">*Campo obligatorio</span>
+                                        </div>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row *ngIf="!hablitarCampos">
+                                    <ion-col size="12">
+                                        <ion-button class="w-button" (click)="loginValidation()" [disabled]="form.invalid">Ingresar
+                                        </ion-button>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row *ngIf="hablitarCampos">
+                                    <ion-col size="12" size-md="6">
+                                        <ion-button class="w-button cancelButon" (click)="cancelarButton()">Cancelar
+                                        </ion-button>
+                                    </ion-col>
+                                    <ion-col size="12" size-md="6">
+                                        <ion-button class="w-button" routerLink="/home">
+                                            Continuar
+                                        </ion-button>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </form>
+                    </ion-card-content>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
 </ion-content>
