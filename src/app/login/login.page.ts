@@ -32,7 +32,7 @@ export class LoginPage implements OnInit {
 
   initForm() {
     this.form = this.formBuilder.group({
-      user: ['', [Validators.required]],
+      email: ['', Validators.compose([Validators.required, Validators.email])],
       password: ['', [Validators.required]],
     });
   }
@@ -53,19 +53,40 @@ export class LoginPage implements OnInit {
         .get('assets/mocks/loginTest.json')
         .pipe(finalize(() => loading.dismiss()))
         .subscribe((data: any) => {
-          this.hablitarCampos = true;
-          const alertEmail = {
-            cssClass: 'sweetAlert1',
-            message: `<div style="width: 100%; text-align:center;"><p>No existe usuario</p></div>`,
-            buttons: [
-              {
-                text: 'Cerrar',
-                role: 'cancel',
-                cssClass: 'btn-Cerrar',
-              },
-            ],
-          };
-          this.showAlert(alertEmail);
+          let passwordLogin = data[0].password;
+          console.log(passwordLogin)
+          let email_analizado = /^([^]+)@(\w+)/.exec(data[0].Correo);
+          let emailAdmin = email_analizado.input;
+          if (this.f.email.value != emailAdmin) {
+            const alertEmail = {
+              cssClass: 'sweetAlert1',
+              message: `<div style="width: 100%; text-align:center;"><p>Email incorrecto</p></div>`,
+              buttons: [
+                {
+                  text: 'Cerrar',
+                  role: 'cancel',
+                  cssClass: 'btn-Cerrar',
+                },
+              ],
+            };
+            this.showAlert(alertEmail);
+          }else if(this.f.password.value != passwordLogin){
+            const alertPassword = {
+              cssClass: 'sweetAlert1',
+              message: `<div style="width: 100%; text-align:center;"><p>Contraseña incorrecta</p></div>`,
+              buttons: [
+                {
+                  text: 'Cerrar',
+                  role: 'cancel',
+                  cssClass: 'btn-Cerrar',
+                },
+              ],
+            };
+            this.showAlert(alertPassword);
+          } 
+          else {
+            this.hablitarCampos = true;
+          }
         });
     });
   }
