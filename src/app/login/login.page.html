@@ -6,7 +6,7 @@
                     <ion-card-content class="contentLogin">
                         <form [formGroup]="form" class="form-home">
                             <div>
-                                <ion-row>
+                                <ion-row *ngIf="!hablitarCampos">
                                     <ion-col size="12">
                                         <ion-label color="primary" class="letraTitulos">Email</ion-label>
                                         <ion-input type="Email" formControlName="email">
@@ -18,7 +18,7 @@
                                         </div>
                                     </ion-col>
                                 </ion-row>
-                                <ion-row>
+                                <ion-row *ngIf="!hablitarCampos">
                                     <ion-col size="12">
                                         <ion-label color="primary" class="letraTitulos">Contraseña</ion-label>
                                         <ion-input type="password" formControlName="password">
@@ -35,13 +35,25 @@
                                     </ion-col>
                                 </ion-row>
                                 <ion-row *ngIf="hablitarCampos">
+                                    <ion-col size="12">
+                                        <ion-label color="success" class="letraTitulos">Nombre: </ion-label>
+                                        <ion-label class="letraTitulos">{{namePrint}}</ion-label>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row *ngIf="hablitarCampos">
+                                    <ion-col size="12">
+                                        <ion-label color="success" class="letraTitulos">Rol: </ion-label>
+                                        <ion-label class="letraTitulos">{{rolPrint}}</ion-label>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row *ngIf="hablitarCampos">
                                     <ion-col size="12" size-md="6">
                                         <ion-button class="w-button cancelButon" (click)="cancelarButton()">Cancelar
                                         </ion-button>
                                     </ion-col>
                                     <ion-col size="12" size-md="6">
                                         <ion-button class="w-button" routerLink="/home">
-                                            Continuar
+                                            Ingresar
                                         </ion-button>
                                     </ion-col>
                                 </ion-row>

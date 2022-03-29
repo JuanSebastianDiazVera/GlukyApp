@@ -18,6 +18,8 @@ import { AlertController } from '@ionic/angular';
 export class LoginPage implements OnInit {
   form: FormGroup;
   hablitarCampos: any = undefined;
+  namePrint: string;
+  rolPrint: string;
 
   constructor(
     public http: HttpClient,
@@ -53,8 +55,9 @@ export class LoginPage implements OnInit {
         .get('assets/mocks/loginTest.json')
         .pipe(finalize(() => loading.dismiss()))
         .subscribe((data: any) => {
+          this.namePrint = data[0].Nombre;
+          this.rolPrint = data[0].rol;
           let passwordLogin = data[0].password;
-          console.log(passwordLogin)
           let email_analizado = /^([^]+)@(\w+)/.exec(data[0].Correo);
           let emailAdmin = email_analizado.input;
           if (this.f.email.value != emailAdmin) {
